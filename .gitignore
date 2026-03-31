@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+.env.*
+
+# Streamlit
+.streamlit/
+
+# Data
+data/processed/
+tests/_tmp/
+
+# OS
+Thumbs.db
+.DS_Store
