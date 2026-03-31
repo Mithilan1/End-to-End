@@ -1,0 +1,39 @@
+name: ETL Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *' # daily at 02:00 UTC
+
+jobs:
+  run-etl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run ETL pipeline
+        run: python -m src.etl
+
+      - name: Upload medallion data artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: medallion-data
+          path: |
+            data/bronze/price_observations.json
+            data/silver/normalized_prices.csv
+            data/gold/items.json
+            data/gold/recommendations.json
+            data/processed/items.json
