@@ -1,0 +1,9 @@
+item_id,item_name,category,camel_url,date,price
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,https://camelcamelcamel.com/product/B0XXXXX1,2025-02-14,31.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,https://camelcamelcamel.com/product/B0XXXXX1,2025-03-20,27.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,https://camelcamelcamel.com/product/B0XXXXX2,2025-02-14,42.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,https://camelcamelcamel.com/product/B0XXXXX2,2025-03-20,38.99
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,https://camelcamelcamel.com/product/B0XXXXX3,2025-02-14,175.00
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,https://camelcamelcamel.com/product/B0XXXXX3,2025-03-20,172.00
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,https://camelcamelcamel.com/product/B0XXXXX4,2025-02-14,112.99
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,https://camelcamelcamel.com/product/B0XXXXX4,2025-03-20,104.99
