@@ -1,0 +1,21 @@
+item_id,item_name,category,date,price
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2024-01-01,49.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2024-02-01,44.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2024-03-01,39.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2024-07-15,29.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2024-11-25,25.99
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,2025-01-10,33.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,2024-01-01,59.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,2024-06-01,54.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,2024-07-15,49.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,2024-11-25,39.99
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,2025-01-10,44.99
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,2024-01-01,249.00
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,2024-05-01,219.00
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,2024-07-15,189.00
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,2024-11-25,169.00
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,2025-01-10,179.00
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,2024-01-01,139.99
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,2024-08-01,129.99
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,2024-11-25,109.99
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,2025-01-10,114.99
