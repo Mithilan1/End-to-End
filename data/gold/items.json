@@ -1,0 +1,526 @@
+{
+  "amazon_echo_dot": {
+    "item_id": "amazon_echo_dot",
+    "item_name": "Amazon Echo Dot (5th Gen)",
+    "category": "smart_home",
+    "latest_price": 26.99,
+    "current_price": 26.99,
+    "current_price_date": "2026-03-31",
+    "current_price_source": "shopbot_injection",
+    "current_price_currency": "USD",
+    "current_price_merchant": "Amazon",
+    "avg_price": 34.26,
+    "low_price": 25.99,
+    "high_price": 49.99,
+    "price_points": 11,
+    "best_buy_months": [
+      11,
+      7,
+      3
+    ],
+    "seasonal_months": [
+      1,
+      2,
+      3,
+      7,
+      11
+    ],
+    "monthly_price_profile": {
+      "1": 39.66,
+      "2": 35.66,
+      "3": 31.66,
+      "7": 29.99,
+      "11": 25.99
+    },
+    "available_sources": [
+      "camelcamelcamel_injection",
+      "sample_seed",
+      "shopbot_injection"
+    ],
+    "prices": [
+      {
+        "date": "2024-01-01",
+        "price": 49.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-02-01",
+        "price": 44.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-03-01",
+        "price": 39.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-07-15",
+        "price": 29.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-11-25",
+        "price": 25.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-01-10",
+        "price": 33.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-02-14",
+        "price": 31.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-03-20",
+        "price": 27.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2026-01-15",
+        "price": 34.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "price": 29.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-03-31",
+        "price": 26.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      }
+    ],
+    "camel_url": "https://camelcamelcamel.com/product/B0XXXXX1",
+    "shopbot_url": null,
+    "last_updated": "2026-03-31T14:53:17.360021Z"
+  },
+  "apple_airpods_pro": {
+    "item_id": "apple_airpods_pro",
+    "item_name": "Apple AirPods Pro (2nd Gen)",
+    "category": "audio",
+    "latest_price": 169.99,
+    "current_price": 169.99,
+    "current_price_date": "2026-03-31",
+    "current_price_source": "shopbot_injection",
+    "current_price_currency": "USD",
+    "current_price_merchant": "Amazon",
+    "avg_price": 188.6,
+    "low_price": 169.0,
+    "high_price": 249.0,
+    "price_points": 10,
+    "best_buy_months": [
+      11,
+      3,
+      2
+    ],
+    "seasonal_months": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "monthly_price_profile": {
+      "1": 204.33,
+      "2": 177.0,
+      "3": 171.0,
+      "5": 219.0,
+      "7": 189.0,
+      "11": 169.0
+    },
+    "available_sources": [
+      "camelcamelcamel_injection",
+      "sample_seed",
+      "shopbot_injection"
+    ],
+    "prices": [
+      {
+        "date": "2024-01-01",
+        "price": 249.0,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-05-01",
+        "price": 219.0,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-07-15",
+        "price": 189.0,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-11-25",
+        "price": 169.0,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-01-10",
+        "price": 179.0,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-02-14",
+        "price": 175.0,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-03-20",
+        "price": 172.0,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2026-01-15",
+        "price": 184.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "price": 178.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-03-31",
+        "price": 169.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      }
+    ],
+    "camel_url": "https://camelcamelcamel.com/product/B0XXXXX3",
+    "shopbot_url": null,
+    "last_updated": "2026-03-31T14:53:17.370354Z"
+  },
+  "fire_tv_stick": {
+    "item_id": "fire_tv_stick",
+    "item_name": "Amazon Fire TV Stick 4K",
+    "category": "smart_home",
+    "latest_price": 37.49,
+    "current_price": 37.49,
+    "current_price_date": "2026-03-31",
+    "current_price_source": "shopbot_injection",
+    "current_price_currency": "USD",
+    "current_price_merchant": "Amazon",
+    "avg_price": 45.74,
+    "low_price": 37.49,
+    "high_price": 59.99,
+    "price_points": 10,
+    "best_buy_months": [
+      3,
+      11,
+      2
+    ],
+    "seasonal_months": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      11
+    ],
+    "monthly_price_profile": {
+      "1": 50.32,
+      "2": 42.49,
+      "3": 38.24,
+      "6": 54.99,
+      "7": 49.99,
+      "11": 39.99
+    },
+    "available_sources": [
+      "camelcamelcamel_injection",
+      "sample_seed",
+      "shopbot_injection"
+    ],
+    "prices": [
+      {
+        "date": "2024-01-01",
+        "price": 59.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-06-01",
+        "price": 54.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-07-15",
+        "price": 49.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-11-25",
+        "price": 39.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-01-10",
+        "price": 44.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-02-14",
+        "price": 42.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-03-20",
+        "price": 38.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2026-01-15",
+        "price": 45.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "price": 41.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-03-31",
+        "price": 37.49,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      }
+    ],
+    "camel_url": "https://camelcamelcamel.com/product/B0XXXXX2",
+    "shopbot_url": null,
+    "last_updated": "2026-03-31T14:53:17.748505Z"
+  },
+  "kindle_paperwhite": {
+    "item_id": "kindle_paperwhite",
+    "item_name": "Amazon Kindle Paperwhite",
+    "category": "e-reader",
+    "latest_price": 99.99,
+    "current_price": 99.99,
+    "current_price_date": "2026-03-31",
+    "current_price_source": "shopbot_injection",
+    "current_price_currency": "USD",
+    "current_price_merchant": "Amazon",
+    "avg_price": 115.88,
+    "low_price": 99.99,
+    "high_price": 139.99,
+    "price_points": 9,
+    "best_buy_months": [
+      3,
+      11,
+      2
+    ],
+    "seasonal_months": [
+      1,
+      2,
+      3,
+      8,
+      11
+    ],
+    "monthly_price_profile": {
+      "1": 124.99,
+      "2": 111.49,
+      "3": 102.49,
+      "8": 129.99,
+      "11": 109.99
+    },
+    "available_sources": [
+      "camelcamelcamel_injection",
+      "sample_seed",
+      "shopbot_injection"
+    ],
+    "prices": [
+      {
+        "date": "2024-01-01",
+        "price": 139.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-08-01",
+        "price": 129.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2024-11-25",
+        "price": 109.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-01-10",
+        "price": 114.99,
+        "source": [
+          "sample_seed"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-02-14",
+        "price": 112.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2025-03-20",
+        "price": 104.99,
+        "source": [
+          "camelcamelcamel_injection"
+        ],
+        "merchant": []
+      },
+      {
+        "date": "2026-01-15",
+        "price": 119.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "price": 109.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      },
+      {
+        "date": "2026-03-31",
+        "price": 99.99,
+        "source": [
+          "shopbot_injection"
+        ],
+        "merchant": [
+          "Amazon"
+        ]
+      }
+    ],
+    "camel_url": "https://camelcamelcamel.com/product/B0XXXXX4",
+    "shopbot_url": null,
+    "last_updated": "2026-03-31T14:53:18.832045Z"
+  }
+}
