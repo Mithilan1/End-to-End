@@ -1,0 +1,13 @@
+item_id,item_name,category,shopbot_url,merchant,date,price,currency
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,,Amazon,2026-01-15,34.99,USD
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,,Amazon,2026-02-20,29.99,USD
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,,Amazon,2026-03-31,26.99,USD
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,,Amazon,2026-01-15,45.99,USD
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,,Amazon,2026-02-20,41.99,USD
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,,Amazon,2026-03-31,37.49,USD
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,,Amazon,2026-01-15,184.99,USD
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,,Amazon,2026-02-20,178.99,USD
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,,Amazon,2026-03-31,169.99,USD
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,,Amazon,2026-01-15,119.99,USD
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,,Amazon,2026-02-20,109.99,USD
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,,Amazon,2026-03-31,99.99,USD
