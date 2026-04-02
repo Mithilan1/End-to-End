@@ -1,0 +1,298 @@
+{
+  "amazon_echo_dot": {
+    "recommendation": "Buy now",
+    "reason": "The current price ($26.99) is already near the historical low ($25.99) and within 2% of the best near-term forecast.",
+    "latest_price": 26.99,
+    "current_price": 26.99,
+    "target_price": 23.89,
+    "next_sale_name": "Spring Sale",
+    "next_sale_month": 3,
+    "buy_month": 3,
+    "buy_window": "Now",
+    "confidence": "High",
+    "price_vs_average_pct": -21.2,
+    "price_vs_low_pct": 3.8,
+    "best_buy_months": [
+      11,
+      7,
+      3
+    ],
+    "best_price_windows": {
+      "30": {
+        "price": 26.99,
+        "date": "2026-03-31"
+      },
+      "60": {
+        "price": 26.99,
+        "date": "2026-03-31"
+      },
+      "90": {
+        "price": 26.99,
+        "date": "2026-03-31"
+      }
+    },
+    "forecast_prices": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 29.01
+      },
+      "60": {
+        "date": "2026-05-30",
+        "price": 28.68
+      },
+      "90": {
+        "date": "2026-06-29",
+        "price": 28.34
+      }
+    },
+    "future_sale_forecasts": [
+      {
+        "sale_name": "Spring Sale",
+        "sale_month": 3,
+        "target_date": "2027-03-15",
+        "predicted_price": 24.53
+      },
+      {
+        "sale_name": "Prime Day",
+        "sale_month": 7,
+        "target_date": "2026-07-15",
+        "predicted_price": 26.67
+      },
+      {
+        "sale_name": "Back to School",
+        "sale_month": 8,
+        "target_date": "2026-08-15",
+        "predicted_price": 27.81
+      },
+      {
+        "sale_name": "Black Friday / Cyber Monday",
+        "sale_month": 11,
+        "target_date": "2026-11-15",
+        "predicted_price": 23.89
+      }
+    ],
+    "reference_date": "2026-03-31"
+  },
+  "apple_airpods_pro": {
+    "recommendation": "Buy now",
+    "reason": "The current price ($169.99) is already near the historical low ($169.00) and within 2% of the best near-term forecast.",
+    "latest_price": 169.99,
+    "current_price": 169.99,
+    "target_price": 152.43,
+    "next_sale_name": "Spring Sale",
+    "next_sale_month": 3,
+    "buy_month": 3,
+    "buy_window": "Now",
+    "confidence": "High",
+    "price_vs_average_pct": -9.9,
+    "price_vs_low_pct": 0.6,
+    "best_buy_months": [
+      11,
+      3,
+      2
+    ],
+    "best_price_windows": {
+      "30": {
+        "price": 169.99,
+        "date": "2026-03-31"
+      },
+      "60": {
+        "price": 169.99,
+        "date": "2026-03-31"
+      },
+      "90": {
+        "price": 169.99,
+        "date": "2026-03-31"
+      }
+    },
+    "forecast_prices": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 171.41
+      },
+      "60": {
+        "date": "2026-05-30",
+        "price": 180.84
+      },
+      "90": {
+        "date": "2026-06-29",
+        "price": 169.0
+      }
+    },
+    "future_sale_forecasts": [
+      {
+        "sale_name": "Spring Sale",
+        "sale_month": 3,
+        "target_date": "2027-03-15",
+        "predicted_price": 152.43
+      },
+      {
+        "sale_name": "Prime Day",
+        "sale_month": 7,
+        "target_date": "2026-07-15",
+        "predicted_price": 168.49
+      },
+      {
+        "sale_name": "Back to School",
+        "sale_month": 8,
+        "target_date": "2026-08-15",
+        "predicted_price": 167.11
+      },
+      {
+        "sale_name": "Black Friday / Cyber Monday",
+        "sale_month": 11,
+        "target_date": "2026-11-15",
+        "predicted_price": 156.55
+      }
+    ],
+    "reference_date": "2026-03-31"
+  },
+  "fire_tv_stick": {
+    "recommendation": "Buy now",
+    "reason": "The current price ($37.49) is already near the historical low ($37.49) and within 2% of the best near-term forecast.",
+    "latest_price": 37.49,
+    "current_price": 37.49,
+    "target_price": 33.81,
+    "next_sale_name": "Spring Sale",
+    "next_sale_month": 3,
+    "buy_month": 3,
+    "buy_window": "Now",
+    "confidence": "High",
+    "price_vs_average_pct": -18.0,
+    "price_vs_low_pct": 0.0,
+    "best_buy_months": [
+      3,
+      11,
+      2
+    ],
+    "best_price_windows": {
+      "30": {
+        "price": 37.49,
+        "date": "2026-03-31"
+      },
+      "60": {
+        "price": 37.49,
+        "date": "2026-03-31"
+      },
+      "90": {
+        "price": 37.49,
+        "date": "2026-03-31"
+      }
+    },
+    "forecast_prices": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 40.43
+      },
+      "60": {
+        "date": "2026-05-30",
+        "price": 40.05
+      },
+      "90": {
+        "date": "2026-06-29",
+        "price": 42.91
+      }
+    },
+    "future_sale_forecasts": [
+      {
+        "sale_name": "Spring Sale",
+        "sale_month": 3,
+        "target_date": "2027-03-15",
+        "predicted_price": 33.81
+      },
+      {
+        "sale_name": "Prime Day",
+        "sale_month": 7,
+        "target_date": "2026-07-15",
+        "predicted_price": 40.96
+      },
+      {
+        "sale_name": "Back to School",
+        "sale_month": 8,
+        "target_date": "2026-08-15",
+        "predicted_price": 39.09
+      },
+      {
+        "sale_name": "Black Friday / Cyber Monday",
+        "sale_month": 11,
+        "target_date": "2026-11-15",
+        "predicted_price": 35.93
+      }
+    ],
+    "reference_date": "2026-03-31"
+  },
+  "kindle_paperwhite": {
+    "recommendation": "Buy now",
+    "reason": "The current price ($99.99) is already near the historical low ($99.99) and within 2% of the best near-term forecast.",
+    "latest_price": 99.99,
+    "current_price": 99.99,
+    "target_price": 96.23,
+    "next_sale_name": "Spring Sale",
+    "next_sale_month": 3,
+    "buy_month": 3,
+    "buy_window": "Now",
+    "confidence": "High",
+    "price_vs_average_pct": -13.7,
+    "price_vs_low_pct": 0.0,
+    "best_buy_months": [
+      3,
+      11,
+      2
+    ],
+    "best_price_windows": {
+      "30": {
+        "price": 99.99,
+        "date": "2026-03-31"
+      },
+      "60": {
+        "price": 99.99,
+        "date": "2026-03-31"
+      },
+      "90": {
+        "price": 99.99,
+        "date": "2026-03-31"
+      }
+    },
+    "forecast_prices": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 107.62
+      },
+      "60": {
+        "date": "2026-05-30",
+        "price": 106.99
+      },
+      "90": {
+        "date": "2026-06-29",
+        "price": 106.36
+      }
+    },
+    "future_sale_forecasts": [
+      {
+        "sale_name": "Spring Sale",
+        "sale_month": 3,
+        "target_date": "2027-03-15",
+        "predicted_price": 96.23
+      },
+      {
+        "sale_name": "Prime Day",
+        "sale_month": 7,
+        "target_date": "2026-07-15",
+        "predicted_price": 106.03
+      },
+      {
+        "sale_name": "Back to School",
+        "sale_month": 8,
+        "target_date": "2026-08-15",
+        "predicted_price": 110.31
+      },
+      {
+        "sale_name": "Black Friday / Cyber Monday",
+        "sale_month": 11,
+        "target_date": "2026-11-15",
+        "predicted_price": 101.38
+      }
+    ],
+    "reference_date": "2026-03-31"
+  }
+}
