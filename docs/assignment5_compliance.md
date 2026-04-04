@@ -17,11 +17,11 @@ April 2, 2026
 - Meaningful tests for core behavior and pipeline outputs in [tests/test_predict.py](../tests/test_predict.py), [tests/test_medallion.py](../tests/test_medallion.py), and [tests/test_vercel_app.py](../tests/test_vercel_app.py)
 - Vercel-ready deployment shape using [index.py](../index.py) and `public/**`
 - Clear README and architecture/process notes
+- Parent PRD GitHub Issue: `#1`
+- PRD-to-issues GitHub slices: `#2` through `#7`
 
 ## Partially Satisfied Or Still Manual
 
-- `write-a-prd` evidence exists in [docs/prd.md](prd.md), but the assignment still expects a parent GitHub Issue link
-- `prd-to-issues` planning exists in [docs/implementation_slices.md](implementation_slices.md), but those slices still need to exist as actual GitHub Issues in the public repo
 - `grill-me` still needs a saved excerpt, screenshot, or explicit notes from the original session
 - Playwright MCP evidence is now documented in-repo, but the final video still needs to show it
 - A real deployed Vercel URL must still be created and submitted
@@ -37,8 +37,6 @@ April 2, 2026
 
 ## Before Submission
 
-- Create and link the parent PRD GitHub Issue
-- Create and link the smaller GitHub Issues created from the PRD
 - Add the saved `grill-me` evidence if it is not already captured elsewhere
 - Deploy the repo to Vercel and test the live URL
 - Record the required 10-minute video

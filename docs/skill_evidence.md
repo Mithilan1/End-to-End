@@ -21,26 +21,29 @@ Suggested addition:
 ## 2. `write-a-prd`
 
 Current evidence status:
-Mostly satisfied in-repo, but missing the GitHub Issue link
+Satisfied
 
 Repository artifact:
 - [docs/prd.md](prd.md)
 
-Still needed:
-- create the parent PRD as a real GitHub Issue in the public repo
-- add the issue URL here
+GitHub issue:
+- Parent PRD issue: https://github.com/Mithilan1/End-to-End/issues/1
 
 ## 3. `prd-to-issues`
 
 Current evidence status:
-Partially satisfied in-repo, but missing real GitHub Issues
+Satisfied
 
 Repository artifact:
 - [docs/implementation_slices.md](implementation_slices.md)
 
-Still needed:
-- create GitHub Issues for the tracer-bullet slices
-- link those issue URLs here
+GitHub issues:
+- https://github.com/Mithilan1/End-to-End/issues/2
+- https://github.com/Mithilan1/End-to-End/issues/3
+- https://github.com/Mithilan1/End-to-End/issues/4
+- https://github.com/Mithilan1/End-to-End/issues/5
+- https://github.com/Mithilan1/End-to-End/issues/6
+- https://github.com/Mithilan1/End-to-End/issues/7
 
 ## 4. `tdd`
 
