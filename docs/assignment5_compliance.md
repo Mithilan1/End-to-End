@@ -15,7 +15,7 @@ April 2, 2026
 - User-facing application for text search and image-assisted lookup
 - LLM-enabled layer through [src/llm_client.py](../src/llm_client.py)
 - Meaningful tests for core behavior and pipeline outputs in [tests/test_predict.py](../tests/test_predict.py), [tests/test_medallion.py](../tests/test_medallion.py), and [tests/test_vercel_app.py](../tests/test_vercel_app.py)
-- Vercel-ready deployment shape using [src/vercel_app.py](../src/vercel_app.py), [pyproject.toml](../pyproject.toml), and `public/**`
+- Vercel-ready deployment shape using [index.py](../index.py) and `public/**`
 - Clear README and architecture/process notes
 - Parent PRD GitHub Issue: `#1`
 - PRD-to-issues GitHub slices: `#2` through `#7`
@@ -31,8 +31,8 @@ April 2, 2026
 
 - The handout recommends object storage, but it does not require production infrastructure. This repo uses curated JSON and CSV files plus GitHub Actions artifacts to keep the POC simple and explainable.
 - The repo now contains two UI surfaces:
-  - [app.py](../app.py) for local Streamlit exploration
-  - [index.py](../index.py) for local Flask preview plus [src/vercel_app.py](../src/vercel_app.py) and `public/**` for Vercel deployment
+  - [streamlit_app.py](../streamlit_app.py) for local Streamlit exploration
+  - [index.py](../index.py) plus `public/**` for Vercel deployment
 - The Vercel surface is the one intended for the assignment deployment requirement.
 
 ## Before Submission

@@ -2,8 +2,7 @@
 
 This repository now includes a Vercel-friendly deployment surface:
 
-- [src/vercel_app.py](../src/vercel_app.py) exposes the deployed Flask application
-- [pyproject.toml](../pyproject.toml) tells Vercel which Flask app to boot
+- [index.py](../index.py) exposes the deployed Flask application
 - `public/**` contains the browser UI assets
 - `data/gold/items.json` and `data/gold/recommendations.json` act as the runtime source of truth
 
@@ -45,8 +44,9 @@ Open:
 
 ## Notes
 
-- The deployed Vercel surface is separate from the local Streamlit prototype in [app.py](../app.py).
+- The deployed Vercel surface is separate from the local Streamlit prototype in [streamlit_app.py](../streamlit_app.py).
 - The deployed Flask function should not use Flask static-file serving on Vercel. Static assets come from `public/**`.
+- The root `app.py` name is intentionally avoided for Streamlit so Vercel does not confuse it with a Flask entrypoint.
 - The ETL should still be run through GitHub Actions or locally before deploying if you change source data.
 - The simplest assignment-friendly workflow is:
   - commit code and curated data

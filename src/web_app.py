@@ -47,7 +47,7 @@ def _attach_summary(response_payload: dict, include_summary: bool) -> dict:
 
 
 def create_app(*, serve_local_static: bool) -> Flask:
-    flask_kwargs = {}
+    flask_kwargs = {"static_folder": None}
     if serve_local_static:
         flask_kwargs["static_folder"] = str(PUBLIC_ROOT)
         flask_kwargs["static_url_path"] = ""

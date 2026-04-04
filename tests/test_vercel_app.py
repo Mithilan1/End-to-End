@@ -3,7 +3,9 @@ from io import BytesIO
 
 from PIL import Image
 
-from src.vercel_app import app
+from src.web_app import create_app
+
+app = create_app(serve_local_static=False)
 
 
 class VercelAppTests(unittest.TestCase):

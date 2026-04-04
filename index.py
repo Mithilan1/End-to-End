@@ -1,8 +1,11 @@
 from __future__ import annotations
 
-from src.web_app import create_app, run_local
+import os
 
-app = create_app(serve_local_static=True)
+from src.web_app import create_app, run_local, truthy
+
+# Vercel exposes a VERCEL env var in the runtime; locally we keep static serving enabled.
+app = create_app(serve_local_static=not truthy(os.getenv("VERCEL")))
 
 
 if __name__ == "__main__":

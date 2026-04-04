@@ -75,8 +75,8 @@ Before:
 After:
 - explicit `bronze`, `silver`, and `gold` outputs in the ETL
 - shared dashboard shaping logic in [src/dashboard_service.py](../src/dashboard_service.py)
-- deployment-facing Flask entrypoint in [src/vercel_app.py](../src/vercel_app.py)
-- local Flask runner in [index.py](../index.py)
+- deployment-facing Flask entrypoint in [index.py](../index.py)
+- Streamlit prototype isolated in [streamlit_app.py](../streamlit_app.py)
 - preserved domain logic in the existing ETL and prediction modules
 - a dedicated CamelCamelCamel API source adapter in [src/camelcamelcamel.py](src/camelcamelcamel.py)
 
