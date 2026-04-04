@@ -2,7 +2,8 @@
 
 This repository now includes a Vercel-friendly deployment surface:
 
-- [index.py](../index.py) exposes the Flask application
+- [src/vercel_app.py](../src/vercel_app.py) exposes the deployed Flask application
+- [pyproject.toml](../pyproject.toml) tells Vercel which Flask app to boot
 - `public/**` contains the browser UI assets
 - `data/gold/items.json` and `data/gold/recommendations.json` act as the runtime source of truth
 
@@ -26,7 +27,7 @@ Open:
 ## Vercel Setup
 
 1. Import the GitHub repository into Vercel
-2. Leave the framework detection on the Python/other default path
+2. Leave the framework detection on the Python default path
 3. If you want LLM summaries or image-assisted catalog matching, set:
    - `OPENAI_API_KEY`
    - optional `OPENAI_SUMMARY_MODEL`
@@ -36,6 +37,7 @@ Open:
 ## Post-Deploy Checks
 
 - load the home page
+- confirm it redirects to `/index.html` instead of returning a 404 from Flask
 - search for `Echo Dot`
 - confirm the recommendation cards render
 - confirm the 6-month and 1-year charts load
@@ -44,6 +46,7 @@ Open:
 ## Notes
 
 - The deployed Vercel surface is separate from the local Streamlit prototype in [app.py](../app.py).
+- The deployed Flask function should not use Flask static-file serving on Vercel. Static assets come from `public/**`.
 - The ETL should still be run through GitHub Actions or locally before deploying if you change source data.
 - The simplest assignment-friendly workflow is:
   - commit code and curated data

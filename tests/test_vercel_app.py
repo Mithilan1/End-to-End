@@ -3,12 +3,18 @@ from io import BytesIO
 
 from PIL import Image
 
-from index import app
+from src.vercel_app import app
 
 
 class VercelAppTests(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
+
+    def test_home_redirects_to_static_index_page(self):
+        response = self.client.get("/")
+
+        self.assertEqual(response.status_code, 307)
+        self.assertEqual(response.headers["Location"], "/index.html")
 
     def test_health_endpoint_reports_ready_catalog(self):
         response = self.client.get("/api/health")

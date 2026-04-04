@@ -23,7 +23,8 @@ The project combines:
 
 ## Repository Layout
 
-- `index.py`: Vercel-friendly Flask application entrypoint
+- `index.py`: local Flask runner for the deployment-style web app
+- `src/vercel_app.py`: Vercel Flask entrypoint selected through `pyproject.toml`
 - `public/`: static frontend assets for the deployed web UI
 - `app.py`: Streamlit dashboard
 - `src/medallion.py`: deep ETL module that owns bronze, silver, and gold publishing
@@ -57,7 +58,7 @@ For compatibility with the original prototype, the ETL also writes `data/process
 
 You now have two ways to run the project:
 
-- `python index.py` for the Vercel-style web app
+- `python index.py` for the local Flask web app
 - `streamlit run app.py` for the original local Streamlit dashboard
 
 1. Create a virtual environment.
@@ -85,7 +86,7 @@ copy .env.example .env
 python -m src.etl
 ```
 
-5. Start the Vercel-style local web app.
+5. Start the local Flask web app.
 
 ```powershell
 python index.py
@@ -196,7 +197,8 @@ The CI workflow installs `requirements-ci.txt` so scheduled ETL runs are not blo
 
 The repository is now structured to be deployable on Vercel with:
 
-- [index.py](index.py) as the Flask entrypoint
+- [src/vercel_app.py](src/vercel_app.py) as the Vercel Flask entrypoint
+- [pyproject.toml](pyproject.toml) telling Vercel which Flask app to boot
 - `public/**` as the browser UI
 - `data/gold/items.json` and `data/gold/recommendations.json` as the deployed app's curated source of truth
 

@@ -1,0 +1,6 @@
+[project]
+name = "shopping-price-advisor-poc"
+version = "0.1.0"
+
+[project.scripts]
+app = "src.vercel_app:app"
