@@ -57,7 +57,7 @@ def _dimension_match(image_bytes: bytes, known_item_ids: set[str]) -> dict | Non
 def identify_item_from_image(image_file, items) -> dict | None:
     catalog = _catalog(items)
     known_item_ids = {item["item_id"] for item in catalog}
-    filename = getattr(image_file, "name", "")
+    filename = getattr(image_file, "filename", "") or getattr(image_file, "name", "")
     image_bytes = image_file.getvalue() if hasattr(image_file, "getvalue") else image_file.read()
     if not image_bytes:
         return None

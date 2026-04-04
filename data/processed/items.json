@@ -133,9 +133,11 @@
         ]
       }
     ],
+    "amazon_asin": null,
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX1",
     "shopbot_url": null,
-    "last_updated": "2026-03-31T14:53:17.360021Z"
+    "last_updated": "2026-04-04T15:58:35.700453Z"
   },
   "apple_airpods_pro": {
     "item_id": "apple_airpods_pro",
@@ -265,9 +267,11 @@
         ]
       }
     ],
+    "amazon_asin": null,
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX3",
     "shopbot_url": null,
-    "last_updated": "2026-03-31T14:53:17.370354Z"
+    "last_updated": "2026-04-04T15:58:35.705098Z"
   },
   "fire_tv_stick": {
     "item_id": "fire_tv_stick",
@@ -397,9 +401,11 @@
         ]
       }
     ],
+    "amazon_asin": null,
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX2",
     "shopbot_url": null,
-    "last_updated": "2026-03-31T14:53:17.748505Z"
+    "last_updated": "2026-04-04T15:58:35.710289Z"
   },
   "kindle_paperwhite": {
     "item_id": "kindle_paperwhite",
@@ -519,8 +525,10 @@
         ]
       }
     ],
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX4",
     "shopbot_url": null,
-    "last_updated": "2026-03-31T14:53:18.832045Z"
+    "last_updated": "2026-04-04T15:58:35.714706Z"
   }
 }

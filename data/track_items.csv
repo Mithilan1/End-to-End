@@ -1,5 +1,5 @@
-item_id,item_name,category,camel_url,shopbot_query,shopbot_url
-amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,https://camelcamelcamel.com/product/B0XXXXX1,Amazon Echo Dot 5th Gen,
-fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,https://camelcamelcamel.com/product/B0XXXXX2,Amazon Fire TV Stick 4K,
-apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,https://camelcamelcamel.com/product/B0XXXXX3,Apple AirPods Pro,
-kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,https://camelcamelcamel.com/product/B0XXXXX4,Amazon Kindle Paperwhite,
+item_id,item_name,category,amazon_asin,amazon_marketplace,amazon_url,amazon_query,camel_url,shopbot_query,shopbot_url
+amazon_echo_dot,Amazon Echo Dot (5th Gen),smart_home,,,Amazon Echo Dot 5th Gen,https://camelcamelcamel.com/product/B0XXXXX1,Amazon Echo Dot 5th Gen,
+fire_tv_stick,Amazon Fire TV Stick 4K,smart_home,,,Amazon Fire TV Stick 4K,https://camelcamelcamel.com/product/B0XXXXX2,Amazon Fire TV Stick 4K,
+apple_airpods_pro,Apple AirPods Pro (2nd Gen),audio,,,Apple AirPods Pro,https://camelcamelcamel.com/product/B0XXXXX3,Apple AirPods Pro,
+kindle_paperwhite,Amazon Kindle Paperwhite,e-reader,,,Amazon Kindle Paperwhite,https://camelcamelcamel.com/product/B0XXXXX4,Amazon Kindle Paperwhite,

@@ -62,7 +62,7 @@ with st.sidebar:
     item_name = st.text_input("Type an item name")
     image_file = st.file_uploader("Or upload an item image", type=["png", "jpg", "jpeg"])
     show_llm = st.checkbox("Show LLM summary", value=True)
-    st.caption("The dashboard uses gold ETL outputs, Shopbot current-price seams, and optional LLM vision when an API key is configured.")
+    st.caption("The dashboard uses gold ETL outputs, Amazon affiliate current-price snapshots when configured, legacy injected history, and optional LLM vision.")
 
 selected_item = None
 selected_recommendation = None
@@ -144,6 +144,8 @@ if selected_item:
         st.write(_format_window_metric("Best price in trailing 60 days", best_windows["60"]))
         st.write(_format_window_metric("Best price in trailing 90 days", best_windows["90"]))
         st.write(f"Data sources: {', '.join(selected_item.get('available_sources', []))}")
+        if selected_item.get("amazon_url"):
+            st.write(f"Amazon reference: {selected_item['amazon_url']}")
         if selected_item.get("camel_url"):
             st.write(f"CamelCamelCamel reference: {selected_item['camel_url']}")
         if selected_item.get("shopbot_url"):

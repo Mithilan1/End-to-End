@@ -8,10 +8,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.417881Z"
+    "ingested_at": "2026-04-04T15:58:35.664694Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -22,10 +24,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.417953Z"
+    "ingested_at": "2026-04-04T15:58:35.664725Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -36,10 +40,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.417977Z"
+    "ingested_at": "2026-04-04T15:58:35.664739Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -50,10 +56,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418002Z"
+    "ingested_at": "2026-04-04T15:58:35.664749Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -64,10 +72,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418019Z"
+    "ingested_at": "2026-04-04T15:58:35.664760Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -78,10 +88,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418034Z"
+    "ingested_at": "2026-04-04T15:58:35.664770Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -92,10 +104,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX1",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX1",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432042Z"
+    "ingested_at": "2026-04-04T15:58:35.666271Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -106,10 +120,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX1",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX1",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432097Z"
+    "ingested_at": "2026-04-04T15:58:35.666287Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -120,10 +136,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.432972Z"
+    "ingested_at": "2026-04-04T15:58:35.667386Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -134,10 +152,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.432986Z"
+    "ingested_at": "2026-04-04T15:58:35.667398Z"
   },
   {
     "item_id": "amazon_echo_dot",
@@ -148,10 +168,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Echo Dot 5th Gen",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.432993Z"
+    "ingested_at": "2026-04-04T15:58:35.667402Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -162,10 +184,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418118Z"
+    "ingested_at": "2026-04-04T15:58:35.664828Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -176,10 +200,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418150Z"
+    "ingested_at": "2026-04-04T15:58:35.664837Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -190,10 +216,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418200Z"
+    "ingested_at": "2026-04-04T15:58:35.664846Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -204,10 +232,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418248Z"
+    "ingested_at": "2026-04-04T15:58:35.664855Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -218,10 +248,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418293Z"
+    "ingested_at": "2026-04-04T15:58:35.664863Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -232,10 +264,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX3",
+    "amazon_asin": "",
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX3",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432119Z"
+    "ingested_at": "2026-04-04T15:58:35.666305Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -246,10 +280,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX3",
+    "amazon_asin": "",
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX3",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432123Z"
+    "ingested_at": "2026-04-04T15:58:35.666309Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -260,10 +296,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433011Z"
+    "ingested_at": "2026-04-04T15:58:35.667413Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -274,10 +312,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433015Z"
+    "ingested_at": "2026-04-04T15:58:35.667415Z"
   },
   {
     "item_id": "apple_airpods_pro",
@@ -288,10 +328,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Apple AirPods Pro",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433052Z"
+    "ingested_at": "2026-04-04T15:58:35.667420Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -302,10 +344,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418048Z"
+    "ingested_at": "2026-04-04T15:58:35.664781Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -316,10 +360,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418063Z"
+    "ingested_at": "2026-04-04T15:58:35.664791Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -330,10 +376,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418075Z"
+    "ingested_at": "2026-04-04T15:58:35.664800Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -344,10 +392,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418090Z"
+    "ingested_at": "2026-04-04T15:58:35.664809Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -358,10 +408,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418104Z"
+    "ingested_at": "2026-04-04T15:58:35.664818Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -372,10 +424,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX2",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX2",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432104Z"
+    "ingested_at": "2026-04-04T15:58:35.666295Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -386,10 +440,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX2",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX2",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432115Z"
+    "ingested_at": "2026-04-04T15:58:35.666300Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -400,10 +456,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.432997Z"
+    "ingested_at": "2026-04-04T15:58:35.667405Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -414,10 +472,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433001Z"
+    "ingested_at": "2026-04-04T15:58:35.667407Z"
   },
   {
     "item_id": "fire_tv_stick",
@@ -428,10 +488,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "",
+    "amazon_url": "Amazon Fire TV Stick 4K",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433007Z"
+    "ingested_at": "2026-04-04T15:58:35.667410Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -442,10 +504,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418315Z"
+    "ingested_at": "2026-04-04T15:58:35.664874Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -456,10 +520,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418329Z"
+    "ingested_at": "2026-04-04T15:58:35.664887Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -470,10 +536,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418342Z"
+    "ingested_at": "2026-04-04T15:58:35.664896Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -484,10 +552,12 @@
     "currency": "USD",
     "source": "sample_seed",
     "source_ref": "sample_price_history.csv",
+    "amazon_asin": "",
+    "amazon_url": "",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.418355Z"
+    "ingested_at": "2026-04-04T15:58:35.664904Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -498,10 +568,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX4",
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX4",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432127Z"
+    "ingested_at": "2026-04-04T15:58:35.666322Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -512,10 +584,12 @@
     "currency": "USD",
     "source": "camelcamelcamel_injection",
     "source_ref": "https://camelcamelcamel.com/product/B0XXXXX4",
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "https://camelcamelcamel.com/product/B0XXXXX4",
     "shopbot_url": "",
     "merchant": "",
-    "ingested_at": "2026-03-31T14:53:16.432135Z"
+    "ingested_at": "2026-04-04T15:58:35.666327Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -526,10 +600,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433072Z"
+    "ingested_at": "2026-04-04T15:58:35.667423Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -540,10 +616,12 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433078Z"
+    "ingested_at": "2026-04-04T15:58:35.667425Z"
   },
   {
     "item_id": "kindle_paperwhite",
@@ -554,9 +632,11 @@
     "currency": "USD",
     "source": "shopbot_injection",
     "source_ref": "shopbot_injection.csv",
+    "amazon_asin": "PAPERWHITE",
+    "amazon_url": "Amazon Kindle Paperwhite",
     "camel_url": "",
     "shopbot_url": "",
     "merchant": "Amazon",
-    "ingested_at": "2026-03-31T14:53:16.433082Z"
+    "ingested_at": "2026-04-04T15:58:35.667428Z"
   }
 ]

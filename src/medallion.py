@@ -7,7 +7,8 @@ from typing import Iterable
 
 import pandas as pd
 
-from .camelcamelcamel import load_injected_history, scrape_price_history
+from .amazon_affiliate import extract_asin, fetch_current_snapshot as fetch_amazon_current_snapshot
+from .camelcamelcamel import load_injected_history, fetch_price_history
 from .predict import predict_purchase_timing
 from .shopbot import fetch_current_snapshot, load_injected_snapshots
 
@@ -43,6 +44,15 @@ def _load_tracking_manifest(path: Path) -> dict[str, dict]:
             "item_id": item_id,
             "item_name": (row.get("item_name") or item_id).strip(),
             "category": (row.get("category") or "unknown").strip(),
+            "amazon_asin": extract_asin((row.get("amazon_asin") or row.get("amazon_url") or "").strip()),
+            "amazon_marketplace": (row.get("amazon_marketplace") or "").strip(),
+            "amazon_query": (
+                row.get("amazon_query")
+                or row.get("shopbot_query")
+                or row.get("item_name")
+                or item_id
+            ).strip(),
+            "amazon_url": (row.get("amazon_url") or "").strip(),
             "camel_url": (row.get("camel_url") or "").strip(),
             "shopbot_query": (row.get("shopbot_query") or row.get("item_name") or item_id).strip(),
             "shopbot_url": (row.get("shopbot_url") or "").strip(),
@@ -58,6 +68,8 @@ def _build_observation(
     price: float,
     source: str,
     source_ref: str,
+    amazon_asin: str = "",
+    amazon_url: str = "",
     camel_url: str = "",
     shopbot_url: str = "",
     merchant: str = "",
@@ -72,6 +84,8 @@ def _build_observation(
         "currency": currency,
         "source": source,
         "source_ref": source_ref,
+        "amazon_asin": amazon_asin,
+        "amazon_url": amazon_url,
         "camel_url": camel_url,
         "shopbot_url": shopbot_url,
         "merchant": merchant,
@@ -115,6 +129,8 @@ def _extract_injected_records(path: Path, manifest: dict[str, dict]) -> list[dic
                 price=float(row["price"]),
                 source="camelcamelcamel_injection",
                 source_ref=row.get("camel_url") or path.name,
+                amazon_asin=manifest_row.get("amazon_asin", ""),
+                amazon_url=manifest_row.get("amazon_url", ""),
                 camel_url=row.get("camel_url") or manifest_row.get("camel_url", ""),
                 currency="USD",
             )
@@ -136,6 +152,8 @@ def _extract_shopbot_injected_records(path: Path, manifest: dict[str, dict]) -> 
                 price=float(row["price"]),
                 source="shopbot_injection",
                 source_ref=row.get("shopbot_url") or path.name,
+                amazon_asin=manifest_row.get("amazon_asin", ""),
+                amazon_url=manifest_row.get("amazon_url", ""),
                 shopbot_url=row.get("shopbot_url") or manifest_row.get("shopbot_url", ""),
                 merchant=row.get("merchant", ""),
                 currency=row.get("currency") or "CAD",
@@ -144,8 +162,8 @@ def _extract_shopbot_injected_records(path: Path, manifest: dict[str, dict]) -> 
     return records
 
 
-def _extract_scraped_records(manifest: dict[str, dict], enable_camel_scrape: bool) -> list[dict]:
-    if not enable_camel_scrape:
+def _extract_camel_records(manifest: dict[str, dict], enable_camel_scrape: bool) -> list[dict]:
+    if not (os.getenv("CAMEL_API_URL") or enable_camel_scrape):
         return []
 
     records = []
@@ -154,10 +172,12 @@ def _extract_scraped_records(manifest: dict[str, dict], enable_camel_scrape: boo
         if not camel_url:
             continue
 
-        try:
-            history = scrape_price_history(camel_url)
-        except Exception as exc:
-            print(f"Warning: failed to scrape {row['item_id']} from {camel_url}: {exc}")
+        history, source_type = fetch_price_history(
+            camel_url,
+            item_name=row["item_name"],
+            item_id=row["item_id"],
+        )
+        if not history:
             continue
 
         for entry in history:
@@ -168,12 +188,59 @@ def _extract_scraped_records(manifest: dict[str, dict], enable_camel_scrape: boo
                     category=row["category"],
                     date=entry["date"],
                     price=float(entry["price"]),
-                    source="camelcamelcamel_scrape",
+                    source=source_type,
                     source_ref=camel_url,
+                    amazon_asin=row.get("amazon_asin", ""),
+                    amazon_url=row.get("amazon_url", ""),
                     camel_url=camel_url,
                     currency="USD",
                 )
             )
+    return records
+
+
+def _extract_amazon_live_records(manifest: dict[str, dict]) -> list[dict]:
+    records = []
+    for row in manifest.values():
+        if not (row.get("amazon_asin") or row.get("amazon_url") or row.get("amazon_query")):
+            continue
+
+        try:
+            snapshot = fetch_amazon_current_snapshot(
+                row["item_name"],
+                amazon_asin=row.get("amazon_asin", ""),
+                amazon_url=row.get("amazon_url", ""),
+                amazon_query=row.get("amazon_query", ""),
+                amazon_marketplace=row.get("amazon_marketplace", ""),
+            )
+        except Exception as exc:
+            print(f"Warning: failed to fetch Amazon snapshot for {row['item_id']}: {exc}")
+            continue
+
+        if not snapshot:
+            continue
+
+        captured_at = snapshot.get("captured_at", _utc_timestamp())[:10]
+        records.append(
+            _build_observation(
+                item_id=row["item_id"],
+                item_name=row["item_name"],
+                category=row["category"],
+                date=captured_at,
+                price=float(snapshot["price"]),
+                source=snapshot.get("capture_method", "amazon_creators_api"),
+                source_ref=(
+                    snapshot.get("amazon_url")
+                    or row.get("amazon_url", "")
+                    or row.get("amazon_asin", "")
+                    or row.get("amazon_query", "")
+                ),
+                amazon_asin=snapshot.get("amazon_asin") or row.get("amazon_asin", ""),
+                amazon_url=snapshot.get("amazon_url") or row.get("amazon_url", ""),
+                merchant=snapshot.get("merchant", "Amazon"),
+                currency=snapshot.get("currency") or "CAD",
+            )
+        )
     return records
 
 
@@ -203,6 +270,8 @@ def _extract_shopbot_live_records(manifest: dict[str, dict]) -> list[dict]:
                 price=float(snapshot["price"]),
                 source=snapshot.get("capture_method", "shopbot_live"),
                 source_ref=snapshot.get("shopbot_url") or row.get("shopbot_url", "") or row.get("shopbot_query", ""),
+                amazon_asin=row.get("amazon_asin", ""),
+                amazon_url=row.get("amazon_url", ""),
                 shopbot_url=snapshot.get("shopbot_url") or row.get("shopbot_url", ""),
                 merchant=snapshot.get("merchant", ""),
                 currency=snapshot.get("currency") or "CAD",
@@ -230,7 +299,8 @@ def extract_bronze_records(
     records.extend(_extract_shopbot_injected_records(shopbot_injection_path, manifest))
 
     scrape_enabled = _truthy(os.getenv("ENABLE_EXPERIMENTAL_CAMEL_SCRAPE")) if enable_camel_scrape is None else enable_camel_scrape
-    records.extend(_extract_scraped_records(manifest, scrape_enabled))
+    records.extend(_extract_camel_records(manifest, scrape_enabled))
+    records.extend(_extract_amazon_live_records(manifest))
     records.extend(_extract_shopbot_live_records(manifest))
 
     if not records:
@@ -254,6 +324,8 @@ def build_silver_dataset(records: list[dict]) -> pd.DataFrame:
 
     for column, default in {
         "source_ref": "",
+        "amazon_asin": "",
+        "amazon_url": "",
         "camel_url": "",
         "shopbot_url": "",
         "merchant": "",
@@ -266,6 +338,8 @@ def build_silver_dataset(records: list[dict]) -> pd.DataFrame:
     df["price"] = pd.to_numeric(df["price"], errors="coerce")
     df = df.dropna(subset=["item_id", "item_name", "category", "date", "price"])
     df["source_ref"] = df["source_ref"].fillna("").astype(str)
+    df["amazon_asin"] = df["amazon_asin"].fillna("").astype(str)
+    df["amazon_url"] = df["amazon_url"].fillna("").astype(str)
     df["camel_url"] = df["camel_url"].fillna("").astype(str)
     df["shopbot_url"] = df["shopbot_url"].fillna("").astype(str)
     df["merchant"] = df["merchant"].fillna("").astype(str)
@@ -279,6 +353,8 @@ def build_silver_dataset(records: list[dict]) -> pd.DataFrame:
             category=("category", "last"),
             price=("price", "min"),
             currency=("currency", "last"),
+            amazon_asin=("amazon_asin", "last"),
+            amazon_url=("amazon_url", "last"),
             camel_url=("camel_url", "last"),
             shopbot_url=("shopbot_url", "last"),
             merchant=("merchant", lambda values: "|".join(sorted(set(filter(None, values))))),
@@ -323,11 +399,13 @@ def build_gold_items(df: pd.DataFrame) -> dict[str, dict]:
             for row in group.itertuples()
         ]
         sources = sorted({source for row in group["source"] for source in row.split("|")})
+        last_amazon_asin = next((value for value in reversed(group["amazon_asin"].tolist()) if value), "")
+        last_amazon_url = next((value for value in reversed(group["amazon_url"].tolist()) if value), "")
         last_camel_url = next((value for value in reversed(group["camel_url"].tolist()) if value), "")
         last_shopbot_url = next((value for value in reversed(group["shopbot_url"].tolist()) if value), "")
         latest_row = group.iloc[-1]
-        shopbot_rows = group[group["source"].str.contains("shopbot", case=False, regex=False)]
-        current_row = shopbot_rows.iloc[-1] if not shopbot_rows.empty else latest_row
+        live_rows = group[group["source"].str.contains("amazon|shopbot", case=False, regex=True)]
+        current_row = live_rows.iloc[-1] if not live_rows.empty else latest_row
 
         items[item_id] = {
             "item_id": item_id,
@@ -348,6 +426,8 @@ def build_gold_items(df: pd.DataFrame) -> dict[str, dict]:
             "monthly_price_profile": {str(month): float(price) for month, price in monthly_profile.items()},
             "available_sources": sources,
             "prices": prices,
+            "amazon_asin": last_amazon_asin or None,
+            "amazon_url": last_amazon_url or None,
             "camel_url": last_camel_url or None,
             "shopbot_url": last_shopbot_url or None,
             "last_updated": _utc_timestamp(),

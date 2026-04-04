@@ -1,41 +1,41 @@
-item_id,date,item_name,category,price,currency,camel_url,shopbot_url,merchant,source,source_ref
-amazon_echo_dot,2024-01-01,Amazon Echo Dot (5th Gen),smart_home,49.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2024-02-01,Amazon Echo Dot (5th Gen),smart_home,44.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2024-03-01,Amazon Echo Dot (5th Gen),smart_home,39.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2024-07-15,Amazon Echo Dot (5th Gen),smart_home,29.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2024-11-25,Amazon Echo Dot (5th Gen),smart_home,25.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2025-01-10,Amazon Echo Dot (5th Gen),smart_home,33.99,USD,,,,sample_seed,sample_price_history.csv
-amazon_echo_dot,2025-02-14,Amazon Echo Dot (5th Gen),smart_home,31.99,USD,https://camelcamelcamel.com/product/B0XXXXX1,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX1
-amazon_echo_dot,2025-03-20,Amazon Echo Dot (5th Gen),smart_home,27.99,USD,https://camelcamelcamel.com/product/B0XXXXX1,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX1
-amazon_echo_dot,2026-01-15,Amazon Echo Dot (5th Gen),smart_home,34.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-amazon_echo_dot,2026-02-20,Amazon Echo Dot (5th Gen),smart_home,29.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-amazon_echo_dot,2026-03-31,Amazon Echo Dot (5th Gen),smart_home,26.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-apple_airpods_pro,2024-01-01,Apple AirPods Pro (2nd Gen),audio,249.0,USD,,,,sample_seed,sample_price_history.csv
-apple_airpods_pro,2024-05-01,Apple AirPods Pro (2nd Gen),audio,219.0,USD,,,,sample_seed,sample_price_history.csv
-apple_airpods_pro,2024-07-15,Apple AirPods Pro (2nd Gen),audio,189.0,USD,,,,sample_seed,sample_price_history.csv
-apple_airpods_pro,2024-11-25,Apple AirPods Pro (2nd Gen),audio,169.0,USD,,,,sample_seed,sample_price_history.csv
-apple_airpods_pro,2025-01-10,Apple AirPods Pro (2nd Gen),audio,179.0,USD,,,,sample_seed,sample_price_history.csv
-apple_airpods_pro,2025-02-14,Apple AirPods Pro (2nd Gen),audio,175.0,USD,https://camelcamelcamel.com/product/B0XXXXX3,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX3
-apple_airpods_pro,2025-03-20,Apple AirPods Pro (2nd Gen),audio,172.0,USD,https://camelcamelcamel.com/product/B0XXXXX3,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX3
-apple_airpods_pro,2026-01-15,Apple AirPods Pro (2nd Gen),audio,184.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-apple_airpods_pro,2026-02-20,Apple AirPods Pro (2nd Gen),audio,178.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-apple_airpods_pro,2026-03-31,Apple AirPods Pro (2nd Gen),audio,169.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-fire_tv_stick,2024-01-01,Amazon Fire TV Stick 4K,smart_home,59.99,USD,,,,sample_seed,sample_price_history.csv
-fire_tv_stick,2024-06-01,Amazon Fire TV Stick 4K,smart_home,54.99,USD,,,,sample_seed,sample_price_history.csv
-fire_tv_stick,2024-07-15,Amazon Fire TV Stick 4K,smart_home,49.99,USD,,,,sample_seed,sample_price_history.csv
-fire_tv_stick,2024-11-25,Amazon Fire TV Stick 4K,smart_home,39.99,USD,,,,sample_seed,sample_price_history.csv
-fire_tv_stick,2025-01-10,Amazon Fire TV Stick 4K,smart_home,44.99,USD,,,,sample_seed,sample_price_history.csv
-fire_tv_stick,2025-02-14,Amazon Fire TV Stick 4K,smart_home,42.99,USD,https://camelcamelcamel.com/product/B0XXXXX2,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX2
-fire_tv_stick,2025-03-20,Amazon Fire TV Stick 4K,smart_home,38.99,USD,https://camelcamelcamel.com/product/B0XXXXX2,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX2
-fire_tv_stick,2026-01-15,Amazon Fire TV Stick 4K,smart_home,45.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-fire_tv_stick,2026-02-20,Amazon Fire TV Stick 4K,smart_home,41.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-fire_tv_stick,2026-03-31,Amazon Fire TV Stick 4K,smart_home,37.49,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-kindle_paperwhite,2024-01-01,Amazon Kindle Paperwhite,e-reader,139.99,USD,,,,sample_seed,sample_price_history.csv
-kindle_paperwhite,2024-08-01,Amazon Kindle Paperwhite,e-reader,129.99,USD,,,,sample_seed,sample_price_history.csv
-kindle_paperwhite,2024-11-25,Amazon Kindle Paperwhite,e-reader,109.99,USD,,,,sample_seed,sample_price_history.csv
-kindle_paperwhite,2025-01-10,Amazon Kindle Paperwhite,e-reader,114.99,USD,,,,sample_seed,sample_price_history.csv
-kindle_paperwhite,2025-02-14,Amazon Kindle Paperwhite,e-reader,112.99,USD,https://camelcamelcamel.com/product/B0XXXXX4,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX4
-kindle_paperwhite,2025-03-20,Amazon Kindle Paperwhite,e-reader,104.99,USD,https://camelcamelcamel.com/product/B0XXXXX4,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX4
-kindle_paperwhite,2026-01-15,Amazon Kindle Paperwhite,e-reader,119.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-kindle_paperwhite,2026-02-20,Amazon Kindle Paperwhite,e-reader,109.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
-kindle_paperwhite,2026-03-31,Amazon Kindle Paperwhite,e-reader,99.99,USD,,,Amazon,shopbot_injection,shopbot_injection.csv
+item_id,date,item_name,category,price,currency,amazon_asin,amazon_url,camel_url,shopbot_url,merchant,source,source_ref
+amazon_echo_dot,2024-01-01,Amazon Echo Dot (5th Gen),smart_home,49.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2024-02-01,Amazon Echo Dot (5th Gen),smart_home,44.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2024-03-01,Amazon Echo Dot (5th Gen),smart_home,39.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2024-07-15,Amazon Echo Dot (5th Gen),smart_home,29.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2024-11-25,Amazon Echo Dot (5th Gen),smart_home,25.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2025-01-10,Amazon Echo Dot (5th Gen),smart_home,33.99,USD,,,,,,sample_seed,sample_price_history.csv
+amazon_echo_dot,2025-02-14,Amazon Echo Dot (5th Gen),smart_home,31.99,USD,,Amazon Echo Dot 5th Gen,https://camelcamelcamel.com/product/B0XXXXX1,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX1
+amazon_echo_dot,2025-03-20,Amazon Echo Dot (5th Gen),smart_home,27.99,USD,,Amazon Echo Dot 5th Gen,https://camelcamelcamel.com/product/B0XXXXX1,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX1
+amazon_echo_dot,2026-01-15,Amazon Echo Dot (5th Gen),smart_home,34.99,USD,,Amazon Echo Dot 5th Gen,,,Amazon,shopbot_injection,shopbot_injection.csv
+amazon_echo_dot,2026-02-20,Amazon Echo Dot (5th Gen),smart_home,29.99,USD,,Amazon Echo Dot 5th Gen,,,Amazon,shopbot_injection,shopbot_injection.csv
+amazon_echo_dot,2026-03-31,Amazon Echo Dot (5th Gen),smart_home,26.99,USD,,Amazon Echo Dot 5th Gen,,,Amazon,shopbot_injection,shopbot_injection.csv
+apple_airpods_pro,2024-01-01,Apple AirPods Pro (2nd Gen),audio,249.0,USD,,,,,,sample_seed,sample_price_history.csv
+apple_airpods_pro,2024-05-01,Apple AirPods Pro (2nd Gen),audio,219.0,USD,,,,,,sample_seed,sample_price_history.csv
+apple_airpods_pro,2024-07-15,Apple AirPods Pro (2nd Gen),audio,189.0,USD,,,,,,sample_seed,sample_price_history.csv
+apple_airpods_pro,2024-11-25,Apple AirPods Pro (2nd Gen),audio,169.0,USD,,,,,,sample_seed,sample_price_history.csv
+apple_airpods_pro,2025-01-10,Apple AirPods Pro (2nd Gen),audio,179.0,USD,,,,,,sample_seed,sample_price_history.csv
+apple_airpods_pro,2025-02-14,Apple AirPods Pro (2nd Gen),audio,175.0,USD,,Apple AirPods Pro,https://camelcamelcamel.com/product/B0XXXXX3,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX3
+apple_airpods_pro,2025-03-20,Apple AirPods Pro (2nd Gen),audio,172.0,USD,,Apple AirPods Pro,https://camelcamelcamel.com/product/B0XXXXX3,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX3
+apple_airpods_pro,2026-01-15,Apple AirPods Pro (2nd Gen),audio,184.99,USD,,Apple AirPods Pro,,,Amazon,shopbot_injection,shopbot_injection.csv
+apple_airpods_pro,2026-02-20,Apple AirPods Pro (2nd Gen),audio,178.99,USD,,Apple AirPods Pro,,,Amazon,shopbot_injection,shopbot_injection.csv
+apple_airpods_pro,2026-03-31,Apple AirPods Pro (2nd Gen),audio,169.99,USD,,Apple AirPods Pro,,,Amazon,shopbot_injection,shopbot_injection.csv
+fire_tv_stick,2024-01-01,Amazon Fire TV Stick 4K,smart_home,59.99,USD,,,,,,sample_seed,sample_price_history.csv
+fire_tv_stick,2024-06-01,Amazon Fire TV Stick 4K,smart_home,54.99,USD,,,,,,sample_seed,sample_price_history.csv
+fire_tv_stick,2024-07-15,Amazon Fire TV Stick 4K,smart_home,49.99,USD,,,,,,sample_seed,sample_price_history.csv
+fire_tv_stick,2024-11-25,Amazon Fire TV Stick 4K,smart_home,39.99,USD,,,,,,sample_seed,sample_price_history.csv
+fire_tv_stick,2025-01-10,Amazon Fire TV Stick 4K,smart_home,44.99,USD,,,,,,sample_seed,sample_price_history.csv
+fire_tv_stick,2025-02-14,Amazon Fire TV Stick 4K,smart_home,42.99,USD,,Amazon Fire TV Stick 4K,https://camelcamelcamel.com/product/B0XXXXX2,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX2
+fire_tv_stick,2025-03-20,Amazon Fire TV Stick 4K,smart_home,38.99,USD,,Amazon Fire TV Stick 4K,https://camelcamelcamel.com/product/B0XXXXX2,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX2
+fire_tv_stick,2026-01-15,Amazon Fire TV Stick 4K,smart_home,45.99,USD,,Amazon Fire TV Stick 4K,,,Amazon,shopbot_injection,shopbot_injection.csv
+fire_tv_stick,2026-02-20,Amazon Fire TV Stick 4K,smart_home,41.99,USD,,Amazon Fire TV Stick 4K,,,Amazon,shopbot_injection,shopbot_injection.csv
+fire_tv_stick,2026-03-31,Amazon Fire TV Stick 4K,smart_home,37.49,USD,,Amazon Fire TV Stick 4K,,,Amazon,shopbot_injection,shopbot_injection.csv
+kindle_paperwhite,2024-01-01,Amazon Kindle Paperwhite,e-reader,139.99,USD,,,,,,sample_seed,sample_price_history.csv
+kindle_paperwhite,2024-08-01,Amazon Kindle Paperwhite,e-reader,129.99,USD,,,,,,sample_seed,sample_price_history.csv
+kindle_paperwhite,2024-11-25,Amazon Kindle Paperwhite,e-reader,109.99,USD,,,,,,sample_seed,sample_price_history.csv
+kindle_paperwhite,2025-01-10,Amazon Kindle Paperwhite,e-reader,114.99,USD,,,,,,sample_seed,sample_price_history.csv
+kindle_paperwhite,2025-02-14,Amazon Kindle Paperwhite,e-reader,112.99,USD,PAPERWHITE,Amazon Kindle Paperwhite,https://camelcamelcamel.com/product/B0XXXXX4,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX4
+kindle_paperwhite,2025-03-20,Amazon Kindle Paperwhite,e-reader,104.99,USD,PAPERWHITE,Amazon Kindle Paperwhite,https://camelcamelcamel.com/product/B0XXXXX4,,,camelcamelcamel_injection,https://camelcamelcamel.com/product/B0XXXXX4
+kindle_paperwhite,2026-01-15,Amazon Kindle Paperwhite,e-reader,119.99,USD,PAPERWHITE,Amazon Kindle Paperwhite,,,Amazon,shopbot_injection,shopbot_injection.csv
+kindle_paperwhite,2026-02-20,Amazon Kindle Paperwhite,e-reader,109.99,USD,PAPERWHITE,Amazon Kindle Paperwhite,,,Amazon,shopbot_injection,shopbot_injection.csv
+kindle_paperwhite,2026-03-31,Amazon Kindle Paperwhite,e-reader,99.99,USD,PAPERWHITE,Amazon Kindle Paperwhite,,,Amazon,shopbot_injection,shopbot_injection.csv

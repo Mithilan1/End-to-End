@@ -113,6 +113,50 @@ class MedallionPipelineTests(unittest.TestCase):
         self.assertIn("buy_window", recommendations["echo"])
         self.assertIn("forecast_prices", recommendations["echo"])
 
+    def test_gold_layer_prefers_amazon_live_price_for_current_snapshot(self):
+        bronze_records = [
+            {
+                "item_id": "echo",
+                "item_name": "Echo Dot",
+                "category": "smart_home",
+                "date": "2025-01-10",
+                "price": 39.99,
+                "currency": "USD",
+                "source": "sample_seed",
+                "source_ref": "sample_price_history.csv",
+                "amazon_asin": "B012345678",
+                "amazon_url": "https://www.amazon.ca/dp/B012345678?tag=demo-tag-20",
+                "camel_url": "",
+                "shopbot_url": "",
+                "merchant": "",
+                "ingested_at": "2026-03-31T00:00:00Z",
+            },
+            {
+                "item_id": "echo",
+                "item_name": "Echo Dot",
+                "category": "smart_home",
+                "date": "2026-03-31",
+                "price": 26.49,
+                "currency": "CAD",
+                "source": "amazon_creators_api",
+                "source_ref": "https://www.amazon.ca/dp/B012345678?tag=demo-tag-20",
+                "amazon_asin": "B012345678",
+                "amazon_url": "https://www.amazon.ca/dp/B012345678?tag=demo-tag-20",
+                "camel_url": "",
+                "shopbot_url": "",
+                "merchant": "Amazon",
+                "ingested_at": "2026-03-31T00:00:00Z",
+            },
+        ]
+
+        silver = build_silver_dataset(bronze_records)
+        items = build_gold_items(silver)
+
+        self.assertEqual(items["echo"]["current_price"], 26.49)
+        self.assertEqual(items["echo"]["current_price_source"], "amazon_creators_api")
+        self.assertEqual(items["echo"]["amazon_asin"], "B012345678")
+        self.assertIn("amazon.ca", items["echo"]["amazon_url"])
+
     def test_top_level_pipeline_writes_medallion_outputs(self):
         temp_root = Path(__file__).resolve().parent / "_tmp" / "integration_case"
         temp_root.mkdir(parents=True, exist_ok=True)

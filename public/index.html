@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping Price Advisor</title>
+    <meta
+      name="description"
+      content="A proof-of-concept AI shopping advisor that compares current prices, historical trends, and sale-window forecasts."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="eyebrow">Assignment 5 • End-to-End AI Application</div>
+        <h1>Shopping Price Advisor</h1>
+        <p class="lede">
+          Search by item name or upload a product photo to compare the current price, recent best prices,
+          seasonal deal windows, and forecasted sale timing.
+        </p>
+        <div class="hero-meta">
+          <span id="health-pill" class="pill pill-muted">Checking data…</span>
+          <span class="pill">Medallion ETL</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">Vercel-ready UI</span>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="control-panel card">
+          <div class="panel-heading">
+            <h2>Find a Product</h2>
+            <p>Use text search for the fastest path, or upload a photo when you do not know the exact title.</p>
+          </div>
+
+          <form id="search-form" class="stack">
+            <label class="field">
+              <span>Search by item name</span>
+              <div class="inline-input">
+                <input id="query-input" name="q" type="text" placeholder="Amazon Echo Dot, AirPods Pro, Kindle…" />
+                <button type="submit" class="button button-primary">Search</button>
+              </div>
+            </label>
+          </form>
+
+          <form id="image-form" class="stack">
+            <label class="field">
+              <span>Upload a product image</span>
+              <div class="inline-input inline-input-file">
+                <input id="image-input" name="image" type="file" accept=".png,.jpg,.jpeg" />
+                <button type="submit" class="button button-secondary">Analyze Photo</button>
+              </div>
+            </label>
+          </form>
+
+          <label class="toggle">
+            <input id="summary-toggle" type="checkbox" />
+            <span>Include optional LLM summary when an OpenAI key is configured</span>
+          </label>
+
+          <div id="message-banner" class="message-banner" hidden></div>
+        </section>
+
+        <section id="results" class="results" hidden>
+          <article class="card result-hero">
+            <div>
+              <div id="result-category" class="eyebrow">Tracked item</div>
+              <h2 id="result-title">Item title</h2>
+              <p id="result-source" class="subtle"></p>
+            </div>
+            <div class="source-chip-group">
+              <span id="current-source-chip" class="pill pill-dark"></span>
+            </div>
+          </article>
+
+          <section class="metric-grid">
+            <article class="card metric-card">
+              <div class="metric-label">Current Price</div>
+              <div id="metric-current" class="metric-value">$0.00</div>
+            </article>
+            <article class="card metric-card accent-card">
+              <div class="metric-label">Recommendation</div>
+              <div id="metric-action" class="metric-value">Buy now</div>
+            </article>
+            <article class="card metric-card">
+              <div class="metric-label">Target Price</div>
+              <div id="metric-target" class="metric-value">$0.00</div>
+            </article>
+            <article class="card metric-card">
+              <div class="metric-label">Buy Window</div>
+              <div id="metric-window" class="metric-value">Now</div>
+            </article>
+            <article class="card metric-card">
+              <div class="metric-label">Confidence</div>
+              <div id="metric-confidence" class="metric-value">High</div>
+            </article>
+          </section>
+
+          <section class="metric-grid metric-grid-small">
+            <article class="card detail-card">
+              <div class="metric-label">Best 30 Days</div>
+              <div id="best-30" class="detail-value">n/a</div>
+            </article>
+            <article class="card detail-card">
+              <div class="metric-label">Best 60 Days</div>
+              <div id="best-60" class="detail-value">n/a</div>
+            </article>
+            <article class="card detail-card">
+              <div class="metric-label">Best 90 Days</div>
+              <div id="best-90" class="detail-value">n/a</div>
+            </article>
+            <article class="card detail-card">
+              <div class="metric-label">Forecast 30 Days</div>
+              <div id="forecast-30" class="detail-value">$0.00</div>
+            </article>
+            <article class="card detail-card">
+              <div class="metric-label">Forecast 60 Days</div>
+              <div id="forecast-60" class="detail-value">$0.00</div>
+            </article>
+            <article class="card detail-card">
+              <div class="metric-label">Forecast 90 Days</div>
+              <div id="forecast-90" class="detail-value">$0.00</div>
+            </article>
+          </section>
+
+          <section class="split-grid">
+            <article class="card prose-card">
+              <h3>Recommendation Summary</h3>
+              <p id="recommendation-reason"></p>
+              <div id="recommendation-facts" class="fact-list"></div>
+            </article>
+
+            <article class="card prose-card">
+              <h3>Seasonal Profile</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Month</th>
+                      <th>Average Price</th>
+                    </tr>
+                  </thead>
+                  <tbody id="seasonal-body"></tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+
+          <section class="split-grid">
+            <article class="card chart-card">
+              <div class="chart-header">
+                <h3>6-Month Trend</h3>
+                <p>Historical prices with forecast overlays for the next 30, 60, and 90 days.</p>
+              </div>
+              <div id="chart-6m" class="chart-shell"></div>
+            </article>
+
+            <article class="card chart-card">
+              <div class="chart-header">
+                <h3>1-Year Trend</h3>
+                <p>Longer context to show where the current price sits in the broader curve.</p>
+              </div>
+              <div id="chart-1y" class="chart-shell"></div>
+            </article>
+          </section>
+
+          <section class="split-grid">
+            <article class="card prose-card">
+              <h3>Upcoming Sale Forecasts</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sale Window</th>
+                      <th>Month</th>
+                      <th>Target Date</th>
+                      <th>Predicted Price</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sales-body"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card prose-card">
+              <h3>Alternate Matches</h3>
+              <div id="candidate-empty" class="subtle">Closest alternate text matches will appear here when available.</div>
+              <div class="table-wrap" id="candidate-table-wrap" hidden>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Candidate</th>
+                      <th>Category</th>
+                      <th>Score</th>
+                    </tr>
+                  </thead>
+                  <tbody id="candidate-body"></tbody>
+                </table>
+              </div>
+            </article>
+          </section>
+
+          <article id="llm-card" class="card prose-card" hidden>
+            <h3>LLM Summary</h3>
+            <p id="llm-summary"></p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

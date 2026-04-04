@@ -1,14 +1,24 @@
 import csv
+import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import List
+from typing import Any, List, Tuple
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/126.0.0.0 Safari/537.36"
 )
+DEFAULT_TIMEOUT_SECONDS = 20
+
+
+def _truthy(value: str | None) -> bool:
+    return str(value or "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _safe_text(value: Any) -> str:
+    return str(value or "").strip()
 
 
 def normalize_price(price_text: str) -> float:
@@ -53,6 +63,62 @@ def load_injected_history(path: Path) -> List[dict]:
     return rows
 
 
+def _extract_price_from_value(value: Any) -> float | None:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    text = _safe_text(value)
+    if not text:
+        return None
+    try:
+        return normalize_price(text)
+    except ValueError:
+        return None
+
+
+def _extract_first_text(payload: Any, keys: tuple[str, ...]) -> str:
+    if isinstance(payload, dict):
+        for key in keys:
+            text = _safe_text(payload.get(key))
+            if text:
+                return text
+        for value in payload.values():
+            nested = _extract_first_text(value, keys)
+            if nested:
+                return nested
+    elif isinstance(payload, list):
+        for item in payload:
+            nested = _extract_first_text(item, keys)
+            if nested:
+                return nested
+    return ""
+
+
+def _extract_price_history_payload(payload: Any) -> List[dict]:
+    rows: List[dict] = []
+    if payload is None:
+        return rows
+
+    if isinstance(payload, dict):
+        for key in ("history", "price_history", "records", "prices", "results", "items", "data"):
+            if key in payload:
+                rows.extend(_extract_price_history_payload(payload[key]))
+        if "date" in payload and "price" in payload:
+            try:
+                rows.append({"date": parse_date(payload["date"]), "price": normalize_price(payload["price"])})
+            except ValueError:
+                pass
+        return rows
+
+    if isinstance(payload, list):
+        for item in payload:
+            rows.extend(_extract_price_history_payload(item))
+        return rows
+
+    return rows
+
+
 def find_price_history_table(soup):
     for table in soup.find_all("table"):
         headers = [th.get_text(strip=True).lower() for th in table.find_all("th")]
@@ -70,13 +136,9 @@ def parse_table_history(table) -> List[dict]:
         if cells[0].lower() == "date" and cells[1].lower() == "price":
             continue
         try:
-            parsed = {
-                "date": parse_date(cells[0]),
-                "price": normalize_price(cells[1]),
-            }
+            rows.append({"date": parse_date(cells[0]), "price": normalize_price(cells[1])})
         except ValueError:
             continue
-        rows.append(parsed)
     return rows
 
 
@@ -92,7 +154,7 @@ def scrape_price_history(url: str) -> List[dict]:
     import requests
     from bs4 import BeautifulSoup
 
-    response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=20)
+    response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=DEFAULT_TIMEOUT_SECONDS)
     response.raise_for_status()
     html = response.text
 
@@ -110,5 +172,56 @@ def scrape_price_history(url: str) -> List[dict]:
     raise ValueError("Unable to extract CamelCamelCamel price history from the page.")
 
 
-def fetch_price_history(url: str) -> List[dict]:
-    return scrape_price_history(url)
+def fetch_price_history_from_api(camel_url: str, item_name: str = "", item_id: str = "") -> List[dict]:
+    api_url = os.getenv("CAMEL_API_URL", "").strip()
+    if not api_url:
+        return []
+
+    headers = {"Accept": "application/json"}
+    api_key = os.getenv("CAMEL_API_KEY", "").strip()
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+
+    api_secret = os.getenv("CAMEL_API_SECRET", "").strip()
+    if api_secret:
+        headers["X-Api-Secret"] = api_secret
+
+    partner_tag = os.getenv("CAMEL_API_PARTNER_TAG", "").strip()
+    if partner_tag:
+        headers["X-Partner-Tag"] = partner_tag
+
+    params = {"url": camel_url}
+    if item_name:
+        params["query"] = item_name
+    if item_id:
+        params["item_id"] = item_id
+    partner_type = os.getenv("CAMEL_API_PARTNER_TYPE", "").strip()
+    if partner_type:
+        params["partner_type"] = partner_type
+
+    import requests
+
+    response = requests.get(api_url, params=params, headers=headers, timeout=DEFAULT_TIMEOUT_SECONDS)
+    response.raise_for_status()
+    payload = response.json()
+    history = _extract_price_history_payload(payload)
+    return sorted(history, key=lambda entry: entry["date"]) if history else []
+
+
+def fetch_price_history(camel_url: str, item_name: str = "", item_id: str = "") -> Tuple[List[dict], str]:
+    if os.getenv("CAMEL_API_URL"):
+        try:
+            history = fetch_price_history_from_api(camel_url, item_name=item_name, item_id=item_id)
+            if history:
+                return history, "camelcamelcamel_api"
+        except Exception as exc:
+            print(f"Warning: CamelCamelCamel API request failed for {camel_url}: {exc}")
+
+    if _truthy(os.getenv("ENABLE_EXPERIMENTAL_CAMEL_SCRAPE")):
+        try:
+            history = scrape_price_history(camel_url)
+            return history, "camelcamelcamel_scrape"
+        except Exception as exc:
+            print(f"Warning: experimental CamelCamelCamel scrape failed for {camel_url}: {exc}")
+
+    return [], "camelcamelcamel_api" if os.getenv("CAMEL_API_URL") else "camelcamelcamel_scrape"
