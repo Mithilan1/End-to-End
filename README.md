@@ -118,7 +118,14 @@ This POC treats CamelCamelCamel primarily as a reference and injection source.
 
 ## GitHub Actions
 
-The workflow in `.github/workflows/etl.yml` runs the ETL on pushes to `main`, manual dispatch, and a daily schedule. It uploads the medallion outputs as artifacts.
+The workflow in `.github/workflows/etl.yml` now:
+
+- runs unit tests
+- runs the ETL on pushes to `main`, pull requests, manual dispatch, and a daily schedule
+- verifies that medallion outputs were produced
+- uploads the medallion outputs as artifacts
+
+The CI workflow installs `requirements-ci.txt` so scheduled ETL runs are not blocked by optional app dependencies, while local installs can still use `requirements.txt`.
 
 ## Design Constraints
 
