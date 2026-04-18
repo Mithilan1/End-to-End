@@ -192,6 +192,22 @@ The workflow in `.github/workflows/etl.yml` now:
 
 The CI workflow installs `requirements-ci.txt` so scheduled ETL runs are not blocked by the optional OpenAI SDK dependency. Local and deployment installs can still use `requirements.txt` when you want LLM features enabled.
 
+## Assignment 6 Evaluation
+
+Assignment 6 artifacts are now included directly in the repo:
+
+- `data/assignment6_cases.json`: saved representative cases, failure cases, and evaluation fixtures
+- `src/evaluate_assignment6.py`: reproducible evaluation runner
+- `docs/assignment6_evaluation_results.md`: reviewer-friendly summary of the latest evaluation run
+- `docs/assignment6_evaluation_results.json`: structured evaluation output
+- `docs/assignment6_guide.md`: architecture justification, pipeline walkthrough, improvement summary, and video prep notes
+
+Run the evaluation locally with:
+
+```powershell
+python -m src.evaluate_assignment6
+```
+
 ## Vercel Deployment
 
 The repository is now structured to be deployable on Vercel with:
@@ -208,7 +224,8 @@ Deployment notes live in:
 
 Reviewer-focused assignment notes live in:
 
-- [docs/assignment5_compliance.md](docs/assignment5_compliance.md)
+- [docs/assignment6_guide.md](docs/assignment6_guide.md)
+- [docs/assignment6_evaluation_results.md](docs/assignment6_evaluation_results.md)
 - [docs/skill_evidence.md](docs/skill_evidence.md)
 - [docs/playwright_mcp_evidence.md](docs/playwright_mcp_evidence.md)
 

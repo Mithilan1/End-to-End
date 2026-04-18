@@ -1,0 +1,311 @@
+{
+  "output_quality_cases": [
+    {
+      "case_id": "buy_now_near_low",
+      "description": "Current price is effectively at the low and near-term forecasts are not meaningfully better.",
+      "expected_recommendation": "Buy now",
+      "expected_confidence": "High",
+      "item": {
+        "item_id": "demo_buy_now",
+        "item_name": "Demo Buy Now",
+        "category": "audio",
+        "latest_price": 102.0,
+        "current_price": 102.0,
+        "avg_price": 130.0,
+        "low_price": 100.0,
+        "high_price": 170.0,
+        "best_buy_months": [
+          7,
+          11,
+          12
+        ],
+        "monthly_price_profile": {
+          "7": 104.0,
+          "11": 101.0,
+          "12": 106.0
+        },
+        "prices": [
+          {
+            "date": "2026-01-15",
+            "price": 118.0
+          },
+          {
+            "date": "2026-02-20",
+            "price": 110.0
+          },
+          {
+            "date": "2026-03-31",
+            "price": 102.0
+          }
+        ]
+      },
+      "as_of": "2026-03-31"
+    },
+    {
+      "case_id": "wait_for_november_window",
+      "description": "Current price is elevated and a known sale month is close enough to justify waiting.",
+      "expected_recommendation": "Wait",
+      "expected_confidence": "High",
+      "item": {
+        "item_id": "demo_wait_window",
+        "item_name": "Demo Wait Window",
+        "category": "smart_home",
+        "latest_price": 140.0,
+        "current_price": 140.0,
+        "avg_price": 118.0,
+        "low_price": 95.0,
+        "high_price": 150.0,
+        "best_buy_months": [
+          7,
+          11,
+          12
+        ],
+        "monthly_price_profile": {
+          "7": 99.0,
+          "11": 96.0,
+          "12": 101.0
+        },
+        "prices": [
+          {
+            "date": "2026-06-01",
+            "price": 132.0
+          },
+          {
+            "date": "2026-07-15",
+            "price": 101.0
+          },
+          {
+            "date": "2026-08-20",
+            "price": 126.0
+          },
+          {
+            "date": "2026-10-01",
+            "price": 140.0
+          }
+        ]
+      },
+      "as_of": "2026-10-01"
+    },
+    {
+      "case_id": "buy_now_even_without_sale_hint",
+      "description": "Even outside a named sale month, the price sits at the favorable end of the range.",
+      "expected_recommendation": "Buy now",
+      "expected_confidence": "High",
+      "item": {
+        "item_id": "demo_buy_flat",
+        "item_name": "Demo Buy Flat",
+        "category": "e-reader",
+        "latest_price": 95.0,
+        "current_price": 95.0,
+        "avg_price": 119.0,
+        "low_price": 94.0,
+        "high_price": 149.0,
+        "best_buy_months": [
+          3,
+          11,
+          12
+        ],
+        "monthly_price_profile": {
+          "3": 98.0,
+          "11": 94.0,
+          "12": 97.0
+        },
+        "prices": [
+          {
+            "date": "2026-01-15",
+            "price": 122.0
+          },
+          {
+            "date": "2026-02-15",
+            "price": 109.0
+          },
+          {
+            "date": "2026-03-15",
+            "price": 95.0
+          }
+        ]
+      },
+      "as_of": "2026-03-15"
+    },
+    {
+      "case_id": "wait_for_future_discount",
+      "description": "Recent and seasonal evidence suggest a better future price than the current listing.",
+      "expected_recommendation": "Wait",
+      "expected_confidence": "High",
+      "item": {
+        "item_id": "demo_wait_discount",
+        "item_name": "Demo Wait Discount",
+        "category": "audio",
+        "latest_price": 214.0,
+        "current_price": 214.0,
+        "avg_price": 189.0,
+        "low_price": 159.0,
+        "high_price": 229.0,
+        "best_buy_months": [
+          7,
+          11
+        ],
+        "monthly_price_profile": {
+          "7": 171.0,
+          "11": 162.0
+        },
+        "prices": [
+          {
+            "date": "2026-02-01",
+            "price": 205.0
+          },
+          {
+            "date": "2026-03-01",
+            "price": 214.0
+          },
+          {
+            "date": "2026-04-01",
+            "price": 209.0
+          }
+        ]
+      },
+      "as_of": "2026-04-01"
+    },
+    {
+      "case_id": "wait_with_medium_confidence",
+      "description": "The price is not terrible, but it is still above the strongest expected buy windows.",
+      "expected_recommendation": "Wait",
+      "expected_confidence": "Medium",
+      "item": {
+        "item_id": "demo_wait_medium",
+        "item_name": "Demo Wait Medium",
+        "category": "smart_home",
+        "latest_price": 124.0,
+        "current_price": 124.0,
+        "avg_price": 120.0,
+        "low_price": 99.0,
+        "high_price": 149.0,
+        "best_buy_months": [
+          7,
+          11
+        ],
+        "monthly_price_profile": {
+          "7": 112.0,
+          "11": 101.0
+        },
+        "prices": [
+          {
+            "date": "2026-01-01",
+            "price": 128.0
+          },
+          {
+            "date": "2026-02-01",
+            "price": 121.0
+          },
+          {
+            "date": "2026-03-01",
+            "price": 124.0
+          }
+        ]
+      },
+      "as_of": "2026-03-01"
+    }
+  ],
+  "search_cases": [
+    {
+      "case_id": "search_echo_alias",
+      "query": "alexa speaker",
+      "expected_item_id": "amazon_echo_dot",
+      "kind": "representative"
+    },
+    {
+      "case_id": "search_airpods_semantic",
+      "query": "wireless earbuds",
+      "expected_item_id": "apple_airpods_pro",
+      "kind": "representative"
+    },
+    {
+      "case_id": "search_fire_device",
+      "query": "amazon streaming device",
+      "expected_item_id": "fire_tv_stick",
+      "kind": "representative"
+    },
+    {
+      "case_id": "search_kindle_alias",
+      "query": "paperwhite ereader",
+      "expected_item_id": "kindle_paperwhite",
+      "kind": "representative"
+    },
+    {
+      "case_id": "search_precise_title",
+      "query": "echo dot 5th gen",
+      "expected_item_id": "amazon_echo_dot",
+      "kind": "representative"
+    },
+    {
+      "case_id": "search_unsupported_brand",
+      "query": "samsung earbuds",
+      "expected_item_id": null,
+      "kind": "failure"
+    },
+    {
+      "case_id": "search_out_of_catalog_generic",
+      "query": "bluetooth speaker",
+      "expected_item_id": null,
+      "kind": "failure"
+    }
+  ],
+  "end_to_end_cases": [
+    {
+      "case_id": "e2e_text_alias",
+      "mode": "search",
+      "query": "alexa speaker",
+      "expected_status": 200,
+      "expected_item_id": "amazon_echo_dot",
+      "kind": "representative"
+    },
+    {
+      "case_id": "e2e_text_semantic",
+      "mode": "search",
+      "query": "wireless earbuds",
+      "expected_status": 200,
+      "expected_item_id": "apple_airpods_pro",
+      "kind": "representative"
+    },
+    {
+      "case_id": "e2e_text_catalog_device",
+      "mode": "search",
+      "query": "amazon streaming device",
+      "expected_status": 200,
+      "expected_item_id": "fire_tv_stick",
+      "kind": "representative"
+    },
+    {
+      "case_id": "e2e_image_filename_hint",
+      "mode": "image",
+      "filename": "echo-device.png",
+      "expected_status": 200,
+      "expected_item_id": "amazon_echo_dot",
+      "kind": "representative"
+    },
+    {
+      "case_id": "e2e_text_precise_title",
+      "mode": "search",
+      "query": "kindle paperwhite",
+      "expected_status": 200,
+      "expected_item_id": "kindle_paperwhite",
+      "kind": "representative"
+    },
+    {
+      "case_id": "e2e_unsupported_brand",
+      "mode": "search",
+      "query": "samsung earbuds",
+      "expected_status": 404,
+      "expected_item_id": null,
+      "kind": "failure"
+    },
+    {
+      "case_id": "e2e_unknown_generic",
+      "mode": "search",
+      "query": "bluetooth speaker",
+      "expected_status": 404,
+      "expected_item_id": null,
+      "kind": "failure"
+    }
+  ]
+}

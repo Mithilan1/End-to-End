@@ -6,14 +6,21 @@ __pycache__/
 venv/
 .env
 .env.*
+!.env.example
+.vercel/
 
 # Streamlit
 .streamlit/
 
 # Data
-data/processed/
+data/processed/*
+!data/processed/
+!data/processed/items.json
 tests/_tmp/
 
 # OS
 Thumbs.db
 .DS_Store
+
+# Local logs
+*.log

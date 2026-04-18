@@ -37,6 +37,14 @@ class VercelAppTests(unittest.TestCase):
         self.assertIn("trend_6m", payload["result"])
         self.assertIn("forecast_prices", payload["result"]["prediction"])
 
+    def test_search_endpoint_handles_natural_language_query(self):
+        response = self.client.get("/api/search?q=alexa%20speaker")
+
+        self.assertEqual(response.status_code, 200)
+        payload = response.get_json()
+        self.assertTrue(payload["ok"])
+        self.assertEqual(payload["result"]["item"]["item_id"], "amazon_echo_dot")
+
     def test_image_endpoint_supports_filename_hint_fallback(self):
         image = Image.new("RGB", (120, 120), color=(240, 240, 240))
         buffer = BytesIO()
