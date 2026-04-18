@@ -1,0 +1,335 @@
+{
+  "output_quality": {
+    "metric": "Exact match on the buy-now vs wait recommendation; explanation must be non-empty.",
+    "secondary_metric": "Confidence-label exact match is tracked separately as a calibration signal.",
+    "passed_cases": 5,
+    "total_cases": 5,
+    "accuracy": 1.0,
+    "confidence_matches": 3,
+    "confidence_accuracy": 0.6,
+    "cases": [
+      {
+        "case_id": "buy_now_near_low",
+        "description": "Current price is effectively at the low and near-term forecasts are not meaningfully better.",
+        "expected_recommendation": "Buy now",
+        "actual_recommendation": "Buy now",
+        "expected_confidence": "High",
+        "actual_confidence": "High",
+        "confidence_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "wait_for_november_window",
+        "description": "Current price is elevated and a known sale month is close enough to justify waiting.",
+        "expected_recommendation": "Wait",
+        "actual_recommendation": "Wait",
+        "expected_confidence": "High",
+        "actual_confidence": "High",
+        "confidence_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "buy_now_even_without_sale_hint",
+        "description": "Even outside a named sale month, the price sits at the favorable end of the range.",
+        "expected_recommendation": "Buy now",
+        "actual_recommendation": "Buy now",
+        "expected_confidence": "High",
+        "actual_confidence": "High",
+        "confidence_match": true,
+        "passed": true
+      },
+      {
+        "case_id": "wait_for_future_discount",
+        "description": "Recent and seasonal evidence suggest a better future price than the current listing.",
+        "expected_recommendation": "Wait",
+        "actual_recommendation": "Wait",
+        "expected_confidence": "High",
+        "actual_confidence": "Medium",
+        "confidence_match": false,
+        "passed": true
+      },
+      {
+        "case_id": "wait_with_medium_confidence",
+        "description": "The price is not terrible, but it is still above the strongest expected buy windows.",
+        "expected_recommendation": "Wait",
+        "actual_recommendation": "Wait",
+        "expected_confidence": "Medium",
+        "actual_confidence": "High",
+        "confidence_match": false,
+        "passed": true
+      }
+    ]
+  },
+  "search_eval": {
+    "metric": "Top-1 exact item match accuracy on saved shopper queries, including unsupported-query rejection.",
+    "baseline_name": "Legacy SequenceMatcher-only scorer from Assignment 5",
+    "improved_name": "Alias-aware token scorer plus higher acceptance threshold",
+    "baseline_passed_cases": 3,
+    "improved_passed_cases": 7,
+    "total_cases": 7,
+    "baseline_accuracy": 0.429,
+    "improved_accuracy": 1.0,
+    "cases": [
+      {
+        "case_id": "search_echo_alias",
+        "query": "alexa speaker",
+        "kind": "representative",
+        "expected_item_id": "amazon_echo_dot",
+        "baseline_item_id": "kindle_paperwhite",
+        "baseline_score": 0.476,
+        "improved_item_id": "amazon_echo_dot",
+        "improved_score": 1.0,
+        "baseline_passed": false,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 1.0
+          },
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.571
+          },
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 0.538
+          }
+        ]
+      },
+      {
+        "case_id": "search_airpods_semantic",
+        "query": "wireless earbuds",
+        "kind": "representative",
+        "expected_item_id": "apple_airpods_pro",
+        "baseline_item_id": null,
+        "baseline_score": 0.0,
+        "improved_item_id": "apple_airpods_pro",
+        "improved_score": 1.0,
+        "baseline_passed": false,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 1.0
+          },
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 0.414
+          },
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.364
+          }
+        ]
+      },
+      {
+        "case_id": "search_fire_device",
+        "query": "amazon streaming device",
+        "kind": "representative",
+        "expected_item_id": "fire_tv_stick",
+        "baseline_item_id": "kindle_paperwhite",
+        "baseline_score": 0.553,
+        "improved_item_id": "fire_tv_stick",
+        "improved_score": 0.941,
+        "baseline_passed": false,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "fire_tv_stick",
+            "score": 0.941
+          },
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 0.558
+          },
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.553
+          }
+        ]
+      },
+      {
+        "case_id": "search_kindle_alias",
+        "query": "paperwhite ereader",
+        "kind": "representative",
+        "expected_item_id": "kindle_paperwhite",
+        "baseline_item_id": "kindle_paperwhite",
+        "baseline_score": 0.571,
+        "improved_item_id": "kindle_paperwhite",
+        "improved_score": 0.834,
+        "baseline_passed": true,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.834
+          },
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 0.452
+          },
+          {
+            "item_id": "fire_tv_stick",
+            "score": 0.353
+          }
+        ]
+      },
+      {
+        "case_id": "search_precise_title",
+        "query": "echo dot 5th gen",
+        "kind": "representative",
+        "expected_item_id": "amazon_echo_dot",
+        "baseline_item_id": "amazon_echo_dot",
+        "baseline_score": 0.78,
+        "improved_item_id": "amazon_echo_dot",
+        "improved_score": 1.0,
+        "baseline_passed": true,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 1.0
+          },
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 0.39
+          },
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.357
+          }
+        ]
+      },
+      {
+        "case_id": "search_unsupported_brand",
+        "query": "samsung earbuds",
+        "kind": "failure",
+        "expected_item_id": null,
+        "baseline_item_id": null,
+        "baseline_score": 0.0,
+        "improved_item_id": null,
+        "improved_score": 0.0,
+        "baseline_passed": true,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 0.645
+          },
+          {
+            "item_id": "fire_tv_stick",
+            "score": 0.467
+          },
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 0.429
+          }
+        ]
+      },
+      {
+        "case_id": "search_out_of_catalog_generic",
+        "query": "bluetooth speaker",
+        "kind": "failure",
+        "expected_item_id": null,
+        "baseline_item_id": "kindle_paperwhite",
+        "baseline_score": 0.4,
+        "improved_item_id": null,
+        "improved_score": 0.0,
+        "baseline_passed": false,
+        "improved_passed": true,
+        "top_candidates": [
+          {
+            "item_id": "amazon_echo_dot",
+            "score": 0.667
+          },
+          {
+            "item_id": "kindle_paperwhite",
+            "score": 0.552
+          },
+          {
+            "item_id": "apple_airpods_pro",
+            "score": 0.4
+          }
+        ]
+      }
+    ]
+  },
+  "end_to_end": {
+    "metric": "HTTP status plus exact resolved item id for representative text and image tasks.",
+    "passed_cases": 7,
+    "total_cases": 7,
+    "success_rate": 1.0,
+    "cases": [
+      {
+        "case_id": "e2e_text_alias",
+        "mode": "search",
+        "kind": "representative",
+        "expected_status": 200,
+        "actual_status": 200,
+        "expected_item_id": "amazon_echo_dot",
+        "actual_item_id": "amazon_echo_dot",
+        "passed": true
+      },
+      {
+        "case_id": "e2e_text_semantic",
+        "mode": "search",
+        "kind": "representative",
+        "expected_status": 200,
+        "actual_status": 200,
+        "expected_item_id": "apple_airpods_pro",
+        "actual_item_id": "apple_airpods_pro",
+        "passed": true
+      },
+      {
+        "case_id": "e2e_text_catalog_device",
+        "mode": "search",
+        "kind": "representative",
+        "expected_status": 200,
+        "actual_status": 200,
+        "expected_item_id": "fire_tv_stick",
+        "actual_item_id": "fire_tv_stick",
+        "passed": true
+      },
+      {
+        "case_id": "e2e_image_filename_hint",
+        "mode": "image",
+        "kind": "representative",
+        "expected_status": 200,
+        "actual_status": 200,
+        "expected_item_id": "amazon_echo_dot",
+        "actual_item_id": "amazon_echo_dot",
+        "passed": true
+      },
+      {
+        "case_id": "e2e_text_precise_title",
+        "mode": "search",
+        "kind": "representative",
+        "expected_status": 200,
+        "actual_status": 200,
+        "expected_item_id": "kindle_paperwhite",
+        "actual_item_id": "kindle_paperwhite",
+        "passed": true
+      },
+      {
+        "case_id": "e2e_unsupported_brand",
+        "mode": "search",
+        "kind": "failure",
+        "expected_status": 404,
+        "actual_status": 404,
+        "expected_item_id": null,
+        "actual_item_id": null,
+        "passed": true
+      },
+      {
+        "case_id": "e2e_unknown_generic",
+        "mode": "search",
+        "kind": "failure",
+        "expected_status": 404,
+        "actual_status": 404,
+        "expected_item_id": null,
+        "actual_item_id": null,
+        "passed": true
+      }
+    ]
+  }
+}
